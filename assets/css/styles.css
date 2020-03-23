@@ -1,0 +1,114 @@
+html, body {
+    font-family: 'Rubik', sans-serif;
+
+}
+
+header{
+    padding: 50px;
+    background-color: #3a3972;
+    color: #fff;
+}
+
+main {
+    background-color: #ebf4fa;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.typed-cursor {
+    font-size: 70px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 5px;
+    color: rgba(255,255,255,0.8)
+}
+
+.navbar {
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    border-color: #3a3972;
+    border-radius: 0;
+    min-width: 150px;
+    background-color: #3a3972
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    border-color: #3a3972 !important;
+    background-color: #3a3972 !important;
+}
+
+input {
+    border: 1px solid #3a3972 !important;
+    border-radius: 0 !important;
+    
+}
+
+.feature-box {
+    background: #fff;
+    padding: 30px 20px 30px 30px;
+    border-bottom: 3px solid #fe4f6c;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.feature-box-title {
+    color: #fe4f6c;
+    font-size: 13px;
+}
+
+.weather-box {
+    padding: 30px;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.06);
+    margin: 15px 0;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+
+.forecast-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.city-history {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.city-history-item {
+    margin-right: 10px;
+}
+
+.forecast-box-tile{
+    padding: 30px;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.06);
+    margin: 15px 0;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.forecast-date {
+    color: #fe4f6c;
+    font-size: 13px;
+}
+
+.forecast-icon{
+    text-align: center;
+}
