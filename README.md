@@ -1,7 +1,7 @@
 # Weather App
 
 ## Live Link
-[peachflame.co](peachflame.co)
+[https://acd37.github.io/weather-app/](https://acd37.github.io/weather-app/)
 
 ## Contributors
 @acd37
@@ -13,11 +13,11 @@
 * Completed version of student's homework from the Vanderbilt Coding Bootcamp
 
 ## Home Page
-<img src="./assets/screenshot1.png" alt="screenshot" />
+<img src="./assets/images/screenshot1.png" alt="screenshot" />
 
 
 ## Dashboard Page
-<img src="./assets/screenshot2.png" alt="screenshot" />
+<img src="./assets/images/screenshot2.png" alt="screenshot" />
 
 
 ## License 
