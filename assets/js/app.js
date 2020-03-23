@@ -72,10 +72,10 @@ const getWeather = (city) => {
     })
         .then(response => {
             // add city to history
-            saveCity(city);
+            saveCity(response.name);
 
             // get 5 day forecast
-            getFiveDayForecast(city);
+            getFiveDayForecast(response.name);
 
             // handle response
             const newDiv = $('<div>').addClass("weather-box");
@@ -122,7 +122,6 @@ const getFiveDayForecast = (city) => {
         dataType: 'json'
     })
         .then(response => {
-            console.log(response)
             const res = response.list
 
             for (let i = 0; i < res.length; i++) {
@@ -143,7 +142,7 @@ const getFiveDayForecast = (city) => {
                 }
             }
         }).catch(err => {
-            console.log(err)
+            return err;
         })
 }
 
@@ -165,7 +164,6 @@ $(document).ready(() => {
 
     // execute user search
     $('#city-search').on('click', (e) => {
-        console.log(e)
         e.preventDefault();
 
         const cityInput = $('#city-input').val();
