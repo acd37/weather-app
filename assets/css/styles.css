@@ -21,6 +21,10 @@ h1 {
     font-weight: 500;
 }
 
+.feature-box, .main-content{
+    transform: translateY(-150px);
+}
+
 .typed-cursor {
     font-size: 70px;
 }
