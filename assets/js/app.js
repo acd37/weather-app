@@ -83,7 +83,7 @@ const getWeather = (city) => {
 
             const weatherIconSpan = $('<span>');
             const weatherIconSrc = response.weather[0].icon;
-            const weatherIcon = $("<img>").attr("src", `http://openweathermap.org/img/wn/${weatherIconSrc}@2x.png`)
+            const weatherIcon = $("<img>").attr("src", `https://openweathermap.org/img/wn/${weatherIconSrc}@2x.png`)
             weatherIconSpan.append(weatherIcon);
             city.append(weatherIconSpan);
 
