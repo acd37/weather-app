@@ -4,12 +4,14 @@ html, body {
 }
 
 header{
-    padding: 50px;
+    position: relative;
+    padding-bottom: 150px;
     background-color: #3a3972;
     color: #fff;
 }
 
 main {
+    padding-top: 50px;
     background-color: #ebf4fa;
 }
 
@@ -57,6 +59,17 @@ h4 {
     background-color: #fe4f6c;
     color: #fff;
 }
+
+.bottom-ani {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+}
+
+.bottom-ani path {
+    fill: #ebf4fa;
+  }
 
 input {
     border: 1px solid #3a3972 !important;
