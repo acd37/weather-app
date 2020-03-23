@@ -105,7 +105,12 @@ const getWeather = (city) => {
             if (err.responseJSON.cod === "404") {
 
                 const newDiv = $("<div>").text("Location could not be found. Please try again.").addClass('alert alert-danger my-4').attr('role', 'alert');
-                $("#error").append(newDiv)
+                $("#error").html(newDiv)
+
+                if (localStorage.cities) {
+                    const cities = JSON.parse(localStorage.getItem('cities'));
+                    getWeather(cities[0]);
+                }
             }
         })
 }
@@ -151,7 +156,7 @@ $(document).ready(() => {
 
     // typedjs
     var options = {
-        strings: ['Search Your City.', 'Get Weather.', 'Find Your Clouds.', 'Meteorologize.'],
+        strings: ['Search your city.', 'Get weather.', 'Find your clouds.', 'Or your sun.'],
         typeSpeed: 100,
         backSpeed: 30,
         loop: true
