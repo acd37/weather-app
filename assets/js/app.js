@@ -105,7 +105,7 @@ const getWeather = (city) => {
             if (err.responseJSON.cod === "404") {
 
                 const newDiv = $("<div>").text("Location could not be found. Please try again.").addClass('alert alert-danger my-4').attr('role', 'alert');
-                $("#weather").append(newDiv)
+                $("#error").append(newDiv)
             }
         })
 }
