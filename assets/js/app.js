@@ -135,7 +135,7 @@ const getFiveDayForecast = (city) => {
                     const humidity = $("<div>").text(`Humidity: ${res[i].main.humidity}%`);
                     const weatherIconDiv = $('<div>').addClass("forecast-icon");
                     const weatherIconSrc = res[i].weather[0].icon;
-                    const weatherIcon = $("<img>").attr("src", `http://openweathermap.org/img/wn/${weatherIconSrc}@2x.png`)
+                    const weatherIcon = $("<img>").attr("src", `https://openweathermap.org/img/wn/${weatherIconSrc}@2x.png`)
                     weatherIconDiv.append(weatherIcon);
                     newCard.append(weatherIconDiv, date, temp, humidity);
                     $("#five-day-forecast").append(newCard);
