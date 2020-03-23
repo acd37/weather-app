@@ -53,6 +53,11 @@ h4 {
     background-color: #3a3972 !important;
 }
 
+.alert-danger{
+    background-color: #fe4f6c;
+    color: #fff;
+}
+
 input {
     border: 1px solid #3a3972 !important;
     border-radius: 0 !important;

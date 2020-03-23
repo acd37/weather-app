@@ -20,8 +20,12 @@ const fetchCityHistory = () => {
     }
 
     for (let i = 0; i < 5; i++) {
+
         const newCity = $("<div>").text(`${i + 1}. ${cities[i]}`).addClass("city-history-item");
-        $("#cities").append(newCity);
+        if (cities[i] !== undefined) {
+            $("#cities").append(newCity);
+        }
+
     }
 }
 
@@ -41,7 +45,10 @@ const saveCity = (city) => {
         cities = [];
     }
 
-    cities.unshift(city);
+    if (!cities.includes(city)) {
+        cities.unshift(city);
+    }
+
 
     localStorage.setItem('cities', JSON.stringify(cities));
     fetchCityHistory();
@@ -52,15 +59,8 @@ const getWeather = (city) => {
     // set initialLoad to false
     initialLoad = false;
 
-    // add city to history
-    saveCity(city);
-
-    // get 5 day forecast
-    getFiveDayForecast(city);
-
     // clear input
     $("#weather").empty();
-
 
     // ajax call
     const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
@@ -71,7 +71,12 @@ const getWeather = (city) => {
         dataType: 'json'
     })
         .then(response => {
-            console.log(response);
+            // add city to history
+            saveCity(city);
+
+            // get 5 day forecast
+            getFiveDayForecast(city);
+
             // handle response
             const newDiv = $('<div>').addClass("weather-box");
             const city = $('<h5>').text(response.name).addClass("weather-box-title");
@@ -97,7 +102,11 @@ const getWeather = (city) => {
             fetchCityHistory();
 
         }).catch(err => {
-            console.log(err)
+            if (err.responseJSON.cod === "404") {
+
+                const newDiv = $("<div>").text("Location could not be found. Please try again.").addClass('alert alert-danger my-4').attr('role', 'alert');
+                $("#weather").append(newDiv)
+            }
         })
 }
 
