@@ -6,7 +6,7 @@
 ## Contributors
 @acd37
 
-## Technologiy Stack
+## Technology Stack
 * JavaScript, jQuery, AJAX, HTML, Bootstrap, TypedJS
 
 ## About
